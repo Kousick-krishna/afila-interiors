@@ -1,0 +1,253 @@
+.services-preview {
+  padding: 110px 0;
+  background: var(--color-bg-light);
+  overflow: hidden;
+}
+
+/* HEADER */
+
+.services-preview-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 55px;
+}
+
+.services-preview-eyebrow {
+  margin-bottom: 18px;
+  color: var(--color-accent);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.services-preview-header h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 5vw, 5.3rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+.services-preview-header h2 em {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.services-preview-link {
+  flex-shrink: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--color-text);
+  font-size: 0.75rem;
+}
+
+/* GRID */
+
+.services-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+
+.service-preview-card {
+  position: relative;
+  min-width: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.service-preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* NUMBER */
+
+.service-preview-number {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  z-index: 2;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+/* IMAGE */
+
+.service-preview-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #e8e4dc;
+}
+
+.service-preview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.service-preview-card:hover .service-preview-image img {
+  transform: scale(1.05);
+}
+
+.service-preview-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: #c9c3b8;
+  letter-spacing: 0.12em;
+}
+
+/* CONTENT */
+
+.service-preview-content {
+  position: relative;
+  min-height: 190px;
+  padding: 28px 28px 30px;
+}
+
+.service-preview-content h3 {
+  padding-right: 35px;
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.service-preview-content p {
+  max-width: 330px;
+  margin-top: 15px;
+  color: var(--color-text-light);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.service-preview-arrow {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.service-preview-card:hover .service-preview-arrow {
+  transform: translateX(5px);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .services-preview {
+    padding: 90px 0;
+  }
+
+  .services-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-preview-image {
+    height: 200px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .services-preview {
+    padding: 75px 0;
+  }
+
+  .services-preview-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 38px;
+  }
+
+  .services-preview-header h2 {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+  }
+
+  .services-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-preview-card {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    min-height: 155px;
+  }
+
+  .service-preview-image {
+    height: 100%;
+    min-height: 155px;
+  }
+
+  .service-preview-content {
+    min-height: 155px;
+    padding: 20px 20px 22px;
+  }
+
+  .service-preview-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .service-preview-content p {
+    margin-top: 10px;
+    font-size: 0.76rem;
+    line-height: 1.55;
+  }
+
+  .service-preview-number {
+    top: 12px;
+    left: 12px;
+  }
+
+  .service-preview-arrow {
+    right: 18px;
+    bottom: 18px;
+  }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+
+  .service-preview-card {
+    grid-template-columns: 95px 1fr;
+  }
+
+  .service-preview-image {
+    min-height: 150px;
+  }
+
+  .service-preview-content {
+    min-height: 150px;
+    padding: 17px;
+  }
+
+  .service-preview-content h3 {
+    font-size: 1.12rem;
+  }
+
+  .service-preview-content p {
+    font-size: 0.72rem;
+  }
+}

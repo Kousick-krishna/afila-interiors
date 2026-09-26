@@ -1,0 +1,303 @@
+.enquiry-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(0, 0, 0, 0.58);
+
+  animation: enquiryFadeIn 0.35s ease;
+}
+
+.enquiry-popup {
+  position: relative;
+
+  width: min(900px, 100%);
+  max-height: 90vh;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+
+  overflow: hidden;
+
+  background: var(--color-bg-light);
+
+  border-radius: 8px;
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+
+  animation: enquirySlideUp 0.4s ease;
+}
+
+
+/* CLOSE */
+
+.enquiry-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  z-index: 5;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  color: var(--color-text);
+
+  cursor: pointer;
+
+  font-size: 1.5rem;
+  line-height: 1;
+
+  transition: 0.25s ease;
+}
+
+.enquiry-close:hover {
+  background: var(--color-text);
+  color: white;
+}
+
+
+/* IMAGE */
+
+.enquiry-image {
+  min-height: 570px;
+  overflow: hidden;
+}
+
+.enquiry-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* CONTENT */
+
+.enquiry-content {
+  overflow-y: auto;
+  padding: 55px 50px;
+}
+
+.enquiry-eyebrow {
+  margin-bottom: 15px;
+
+  color: var(--color-accent);
+
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+}
+
+.enquiry-content h2 {
+  font-family: var(--font-heading);
+
+  font-size: clamp(2.6rem, 4vw, 4rem);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+.enquiry-content h2 em {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+
+/* FORM */
+
+.enquiry-content form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+
+  margin-top: 35px;
+}
+
+.enquiry-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.enquiry-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.enquiry-field input,
+.enquiry-field select,
+.enquiry-field textarea {
+  width: 100%;
+
+  padding: 11px 0;
+
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+
+  outline: none;
+
+  background: transparent;
+
+  color: var(--color-text);
+
+  font-size: 0.78rem;
+}
+
+.enquiry-field textarea {
+  resize: vertical;
+  min-height: 75px;
+}
+
+.enquiry-field input:focus,
+.enquiry-field select:focus,
+.enquiry-field textarea:focus {
+  border-color: var(--color-text);
+}
+
+.enquiry-field input::placeholder,
+.enquiry-field textarea::placeholder {
+  color: #999;
+}
+
+.enquiry-field span {
+  color: #a34b43;
+  font-size: 0.6rem;
+}
+
+
+/* BUTTON */
+
+.enquiry-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  margin-top: 5px;
+
+  padding: 14px 20px;
+
+  background: var(--color-text);
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+
+  transition: var(--transition);
+}
+
+.enquiry-submit:hover {
+  background: var(--color-accent);
+}
+
+.enquiry-submit span {
+  transition: transform 0.3s ease;
+}
+
+.enquiry-submit:hover span {
+  transform: translateX(5px);
+}
+
+
+/* ANIMATIONS */
+
+@keyframes enquiryFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes enquirySlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* TABLET */
+
+@media (max-width: 750px) {
+
+  .enquiry-popup {
+    grid-template-columns: 1fr;
+
+    max-height: 92vh;
+  }
+
+  .enquiry-image {
+    min-height: 190px;
+    height: 190px;
+  }
+
+  .enquiry-content {
+    padding: 35px 30px 40px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+  .enquiry-overlay {
+    padding: 12px;
+  }
+
+  .enquiry-popup {
+    max-height: 94vh;
+    border-radius: 6px;
+  }
+
+  .enquiry-image {
+    height: 150px;
+    min-height: 150px;
+  }
+
+  .enquiry-content {
+    padding: 28px 22px 30px;
+  }
+
+  .enquiry-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .enquiry-content form {
+    gap: 14px;
+    margin-top: 25px;
+  }
+
+  .enquiry-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+}

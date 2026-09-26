@@ -1,0 +1,292 @@
+.about-intro {
+  padding: 140px 0 120px;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+/* TOP */
+
+.about-intro-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-intro-label,
+.about-intro-count {
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.about-intro-label {
+  color: var(--color-accent);
+}
+
+.about-intro-count {
+  color: var(--color-text-light);
+}
+
+/* MAIN CONTENT */
+
+.about-intro-content {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(70px, 10vw, 160px);
+  padding: 85px 0 100px;
+}
+
+/* LEFT */
+
+.about-intro-statement {
+  align-self: start;
+}
+
+.about-intro-small {
+  margin-bottom: 30px;
+  color: var(--color-text-light);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.about-intro-statement h2 {
+  max-width: 780px;
+  font-family: var(--font-heading);
+  font-size: clamp(3.4rem, 5.7vw, 6.4rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.about-intro-statement h2 em {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+/* RIGHT */
+
+.about-intro-story {
+  max-width: 500px;
+  padding-top: 55px;
+}
+
+.about-intro-story h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.about-intro-story p {
+  max-width: 440px;
+  margin-top: 24px;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+.about-intro-values {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 42px;
+  border-top: 1px solid var(--color-border);
+}
+
+.about-intro-values span {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  align-items: center;
+  min-height: 52px;
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+.about-intro-values strong {
+  color: var(--color-accent);
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.about-intro-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 38px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--color-text);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-intro-link span {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.about-intro-link:hover span {
+  transform: translateX(6px);
+}
+
+/* BOTTOM */
+
+.about-intro-bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--color-text-light);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+}
+
+.about-intro-line {
+  width: 70px;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* LARGE TABLET */
+
+@media (max-width: 1100px) {
+
+  .about-intro {
+    padding: 110px 0 100px;
+  }
+
+  .about-intro-content {
+    gap: 70px;
+    padding: 70px 0 80px;
+  }
+
+  .about-intro-statement h2 {
+    font-size: clamp(3rem, 6vw, 5rem);
+  }
+
+  .about-intro-story {
+    padding-top: 35px;
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+  .about-intro {
+    padding: 90px 0 80px;
+  }
+
+  .about-intro-content {
+    grid-template-columns: 1fr;
+    gap: 65px;
+    padding: 60px 0 70px;
+  }
+
+  .about-intro-statement h2 {
+    font-size: clamp(3.2rem, 9vw, 5rem);
+  }
+
+  .about-intro-story {
+    max-width: 600px;
+    padding-top: 0;
+    margin-left: auto;
+  }
+
+  .about-intro-story p {
+    max-width: 540px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .about-intro {
+    padding: 75px 0 65px;
+  }
+
+  .about-intro-top {
+    padding-bottom: 20px;
+  }
+
+  .about-intro-label,
+  .about-intro-count {
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+  }
+
+  .about-intro-content {
+    gap: 55px;
+    padding: 48px 0 55px;
+  }
+
+  .about-intro-small {
+    margin-bottom: 22px;
+    font-size: 0.58rem;
+  }
+
+  .about-intro-statement h2 {
+    font-size: clamp(2.8rem, 13vw, 4.3rem);
+    line-height: 0.98;
+  }
+
+  .about-intro-story h3 {
+    font-size: 2.1rem;
+  }
+
+  .about-intro-story p {
+    margin-top: 20px;
+    font-size: 0.86rem;
+    line-height: 1.75;
+  }
+
+  .about-intro-values {
+    margin-top: 32px;
+  }
+
+  .about-intro-values span {
+    min-height: 50px;
+    font-size: 0.95rem;
+  }
+
+  .about-intro-link {
+    margin-top: 32px;
+    font-size: 0.68rem;
+  }
+
+  .about-intro-bottom {
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+  }
+
+  .about-intro-line {
+    width: 45px;
+  }
+}
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 380px) {
+
+  .about-intro {
+    padding-top: 65px;
+  }
+
+  .about-intro-statement h2 {
+    font-size: 2.7rem;
+  }
+
+  .about-intro-story h3 {
+    font-size: 1.9rem;
+  }
+
+  .about-intro-bottom {
+    gap: 12px;
+  }
+}
