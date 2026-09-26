@@ -1,0 +1,90 @@
+backend:
+  name: turbo-github
+  turbo_site_id: 01d4385c-9978-4e48-a702-97c739c62db4
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Location"
+        name: "location"
+        widget: "string"
+
+      - label: "Category"
+        name: "category"
+        widget: "string"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Cover Image"
+        name: "coverImage"
+        widget: "image"
+
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+
+      - label: "Project Images"
+        name: "gallery"
+        widget: "list"
+        field:
+          label: "Image"
+          name: "image"
+          widget: "image"
+
+
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: false
+
+      - label: "Category"
+        name: "category"
+        widget: "string"
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
