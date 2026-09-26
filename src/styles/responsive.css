@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px;
+  }
+
+  .container {
+    width: 88%;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+    line-height: 1.05;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 24px;
+    max-width: 95%;
+  }
+
+  .btn {
+    padding: 13px 22px;
+    font-size: 0.9rem;
+  }
+}
