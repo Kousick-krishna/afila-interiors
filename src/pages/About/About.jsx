@@ -4,17 +4,17 @@ import "./About.css";
 
 const stats = [
   {
-    value: 50, // Replace with actual number
+    value: 500, // Replace with actual number
     suffix: "+",
     label: "PROJECTS COMPLETED",
   },
   {
-    value: 8, // Replace with actual number
+    value: 15, // Replace with actual number
     suffix: "+",
     label: "YEARS OF EXPERIENCE",
   },
   {
-    value: 100, // Replace with actual number
+    value: 150, // Replace with actual number
     suffix: "+",
     label: "HAPPY CLIENTS",
   },

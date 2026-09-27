@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/afila-logo.png";
 import "./Header.css";
 
@@ -28,12 +29,12 @@ function Header() {
           </a>
 
           <nav className="desktop-nav">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/services">Services</a>
-            <a href="/projects">Projects</a>
-            <a href="/gallery">Gallery</a>
-            <a href="/contact">Contact</a>
+            <Link to="/">Home</Link>
+<Link to="/about">About</Link>
+<Link to="/services">Services</Link>
+<Link to="/projects">Projects</Link>
+<Link to="/gallery">Gallery</Link>
+<Link to="/contact">Contact</Link>
           </nav>
 
           <a href="/contact" className="header-button">
@@ -57,29 +58,12 @@ function Header() {
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
 
         <nav className="mobile-nav">
-          <a href="/" onClick={closeMenu}>
-            Home
-          </a>
-
-          <a href="/about" onClick={closeMenu}>
-            About
-          </a>
-
-          <a href="/services" onClick={closeMenu}>
-            Services
-          </a>
-
-          <a href="/projects" onClick={closeMenu}>
-            Projects
-          </a>
-
-          <a href="/gallery" onClick={closeMenu}>
-            Gallery
-          </a>
-
-          <a href="/contact" onClick={closeMenu}>
-            Contact
-          </a>
+          <Link to="/" onClick={closeMenu}>Home</Link>
+<Link to="/about" onClick={closeMenu}>About</Link>
+<Link to="/services" onClick={closeMenu}>Services</Link>
+<Link to="/projects" onClick={closeMenu}>Projects</Link>
+<Link to="/gallery" onClick={closeMenu}>Gallery</Link>
+<Link to="/contact" onClick={closeMenu}>Contact</Link>
         </nav>
 
         <a

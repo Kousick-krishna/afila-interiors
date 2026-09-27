@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -23,17 +24,17 @@ function Footer() {
             <div>
               <span className="footer-label">EXPLORE</span>
 
-              <a href="/">Home</a>
-              <a href="/about">About</a>
-              <a href="/projects">Projects</a>
-              <a href="/gallery">Gallery</a>
+              <Link to="/">Home</Link>
+<Link to="/about">About</Link>
+<Link to="/projects">Projects</Link>
+<Link to="/gallery">Gallery</Link>
             </div>
 
             <div>
               <span className="footer-label">CONNECT</span>
 
-              <a href="/contact">Contact</a>
-              <a href="/contact">Enquire Now</a>
+              <Link to="/contact">Contact</Link>
+<Link to="/contact">Enquire Now</Link>
             </div>
 
           </div>
@@ -62,44 +63,51 @@ function Footer() {
 
           {/* MAP */}
 
-          <div className="footer-map">
+          {/* MAP */}
 
-            <span className="footer-label">
-              VISIT OUR STUDIO
-            </span>
+<div className="footer-map">
 
-            <div className="footer-map-frame">
+  <span className="footer-label">
+    VISIT OUR STUDIO
+  </span>
 
-              <iframe
-                title="Afila Interiors Location"
-                src="https://www.google.com/maps/embed?pb="
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+  <a
+    href="https://maps.app.goo.gl/GZT1kReBvRdXos8HA?g_st=aw"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="footer-map-frame"
+    aria-label="Open Afila Interiors location in Google Maps"
+  >
 
-              <div className="footer-map-placeholder">
-                <span>Google Maps</span>
-                <small>Location will be added here</small>
-              </div>
+    <iframe
+      title="Afila Interiors Location"
+      src="https://www.google.com/maps?q=12.8822489,80.1923523&z=16&output=embed"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
 
-            </div>
+    <div className="footer-map-overlay">
+      <span>OPEN IN GOOGLE MAPS →</span>
+    </div>
 
-          </div>
+  </a>
+
+</div>
 
         </div>
 
 
         <div className="footer-bottom">
 
-          <span>
-            © {new Date().getFullYear()} Afila Interiors
-          </span>
+  <span>
+    © {new Date().getFullYear()} Afila Interiors. All Rights Reserved.
+  </span>
 
-          <span>
-            Chennai, Tamil Nadu
-          </span>
+  <span>
+    Chennai, Tamil Nadu
+  </span>
 
-        </div>
+</div>
 
       </div>
 
