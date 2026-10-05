@@ -10,10 +10,12 @@ import Gallery from "./pages/Gallery/Gallery";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import EnquiryPopup from "./components/EnquiryPopup/EnquiryPopup";
-
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import ScrollToTopOnRouteChange from "./components/ScrollToTop/ScrollToTopOnRouteChange";
 function App() {
   return (
     <>
+    <ScrollToTopOnRouteChange />
       <Header />
 
       <Routes>
@@ -29,6 +31,7 @@ function App() {
       <Footer />
 
       <EnquiryPopup />
+      <ScrollToTop />
     </>
   );
 }
