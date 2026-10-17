@@ -94,8 +94,8 @@ const handleSubmit = (event) => {
 
                 <span>EMAIL</span>
 
-                <a href="mailto:hello@afilainteriors.com">
-                  hello@afilainteriors.com
+                <a href="mailto:afilainteriors@gmail.com">
+                  afilainteriors@gmail.com
                 </a>
 
               </div>

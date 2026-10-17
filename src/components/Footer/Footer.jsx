@@ -46,8 +46,8 @@ function Footer() {
               START A CONVERSATION
             </span>
 
-            <a href="mailto:hello@afilainteriors.com">
-              hello@afilainteriors.com
+            <a href="mailto:afilainteriors@gmail.com">
+              afilainteriors@gmail.com
             </a>
 
             <a href="tel:+919003835891">
